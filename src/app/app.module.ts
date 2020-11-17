@@ -8,6 +8,7 @@ import { RegistrationComponent } from './authentication/registration/registratio
 import { UserComponent } from './user/user.component';
 import { StoresComponent } from './stores/stores.component';
 import { MenuComponent } from './_menu/_menu.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MenuComponent } from './_menu/_menu.component';
     RegistrationComponent,
     UserComponent,
     StoresComponent,
-    MenuComponent
+    MenuComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
