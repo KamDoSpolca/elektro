@@ -1,10 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { AuthService } from '../auth.service';
+import { Login } from '../auth.model';
 
 @Component({
   selector: 'elektro-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   title = 'elektro';
+  loginForm: FormGroup;
+
+  constructor(
+    private _formBuilder: FormBuilder,
+    private _authService: AuthService) { }
+
+  ngOnInit() {
+    this.loginForm = this._formBuilder.group({
+      email: new FormControl(null),
+      password: new FormControl(null)
+    });
+  }
+
+  onSubmit() {
+    const credentials: Login = { email: this.loginForm.value.email, password: this.loginForm.value.password };
+
+    this._authService.login(credentials);    
+  }
+
+  
+
 }
