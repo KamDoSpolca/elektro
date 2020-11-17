@@ -8,6 +8,9 @@ import { RegistrationComponent } from './authentication/registration/registratio
 import { UserComponent } from './user/user.component';
 import { StoresComponent } from './stores/stores.component';
 import { MenuComponent } from './_menu/_menu.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './authentication/auth.service';
+import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './products/products.component';
 
 @NgModule({
@@ -22,9 +25,11 @@ import { ProductsComponent } from './products/products.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
