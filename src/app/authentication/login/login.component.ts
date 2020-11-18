@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Login } from '../auth.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'elektro-login',
@@ -14,7 +15,9 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private _formBuilder: FormBuilder,
-    private _authService: AuthService) { }
+    private _authService: AuthService,
+    private _router: Router
+  ) { }
 
   ngOnInit() {
     this.loginForm = this._formBuilder.group({
@@ -26,9 +29,12 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     const credentials: Login = { email: this.loginForm.value.email, password: this.loginForm.value.password };
 
-    this._authService.login(credentials);    
+    this._authService.login(credentials);
   }
 
-  
+  onRegister() {
+    this._router.navigate(['/register']);
+  }
+
 
 }
