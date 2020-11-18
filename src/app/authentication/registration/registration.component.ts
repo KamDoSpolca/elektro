@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
+import { Login } from '../auth.model';
 
 @Component({
   selector: 'elektro-register',
@@ -7,4 +10,15 @@ import { Component } from '@angular/core';
 })
 export class RegistrationComponent {
   title = 'elektro';
+
+  constructor(
+   private _authService: AuthService,
+   private _router: Router
+  ) { }
+
+
+  onLogin() {
+    this._router.navigate(['/']);
+
+  }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'elektro-products',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent {
   title = 'elektro';
-}
+
+  constructor(
+    private _router: Router
+  ) { }
+
+ 
+  }

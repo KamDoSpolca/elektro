@@ -1,7 +1,7 @@
 <div class="container" style="padding:2rem">
   <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="card col-sm-6" style="background:white ;margin-top:10rem; padding:3rem ;border-radius:1.5rem;">
+    <div class="col-lg-3"></div>
+    <div class="card col-lg-6" style="background:white ;margin-top:10rem; padding:3rem ;border-radius:1.5rem;">
       <div style="font-weight:bold;font-size:32px;text-align:center;">Registrácia</div>
       <form style="padding:1rem; ">
         <div class="form-group">
@@ -24,10 +24,12 @@
           <label>Heslo znova</label>
           <input type="password" class="form-control" id="Password2" placeholder="Heslo znova">
         </div>
-
-        <button type="submit" class="btn btn-primary" style="float:right; margin:1rem">Potvrdiť registráciu</button>
+        <div class="row" style="margin-left:5rem">
+          <button type="submit" class="btn btn-primary">Registrovať</button>
+          <button class="btn btn-primary" (click)="onLogin()">Prihlásiť sa</button>
+        </div>
       </form>
     </div>
-    <div class="col-sm-3"></div>
+    <div class="col-lg-3"></div>
   </div>
 </div>

@@ -12,8 +12,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AuthService } from './authentication/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './products/products.component';
-import { ModalComponent } from './modal/modal.component';
 import { MyStoreComponent } from './mystore/mystore.component';
+import { CreateComponent } from './products/create/create.component';
+
 
 
 @NgModule({
@@ -25,8 +26,8 @@ import { MyStoreComponent } from './mystore/mystore.component';
     StoresComponent,
     MenuComponent,
     ProductsComponent,
-    ModalComponent,
-    MyStoreComponent
+    MyStoreComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,

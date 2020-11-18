@@ -1,0 +1,22 @@
+<elektro-menu></elektro-menu>
+<h1>Vytvoriť produkt</h1>
+
+<div class="container">
+  <div class="form-group">
+    <label>Meno produktu</label>
+    <input type="text" class="form-control" placeholder="Meno produktu" formControlName="name">
+  </div>
+  <div class="form-group">
+    <label>Popis produktu</label>
+    <textarea rows="4" cols="50" class="form-control" placeholder="Popis produktu" formControlName="desc"></textarea>
+  </div>
+  <div class="form-group">
+    <label>Cena</label>
+    <input type="number" class="form-control" placeholder="Cena produktu" formControlName="price">
+  </div>
+  <div class="container" style="margin:3rem">
+    <button type="submit" class="btn btn-primary" (click)="onSubmit() ">Vytvoriť produkt</button>
+    <button class="btn btn-secondary" routerLink="/products">Spät na produkty</button>
+  </div>
+
+</div>
