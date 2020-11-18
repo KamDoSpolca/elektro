@@ -31,6 +31,7 @@ export class AuthService {
   register(credentials: Register): void {
     const url = 'localhost:1234/reg'
     // TODO - hack w/o backend
+    alert('uspesne ste sa registrovali')
     this._router.navigate(['/']);
 
     //this._httpClient.post(url, credentials)
