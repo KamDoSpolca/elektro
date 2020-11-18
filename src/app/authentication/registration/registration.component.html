@@ -3,29 +3,30 @@
     <div class="col-lg-3"></div>
     <div class="card col-lg-6" style="background:white ;margin-top:10rem; padding:3rem ;border-radius:1.5rem;">
       <div style="font-weight:bold;font-size:32px;text-align:center;">Registrácia</div>
-      <form style="padding:1rem; ">
+
+      <form [formGroup]="registerForm" style="padding:1rem;">
         <div class="form-group">
           <label>Rola</label>
-          <input type="text" class="form-control" id="role" placeholder="Rola zamestnanca">
+          <input type="text" class="form-control" id="role" placeholder="Rola zamestnanca" formControlName="role">
         </div>
         <div class="form-group">
           <label>Meno a priezvisko</label>
-          <input type="text" class="form-control" id="name" placeholder="Meno a priezvisko">
+          <input type="text" class="form-control" id="name" placeholder="Meno a priezvisko" formControlName="name">
         </div>
         <div class="form-group">
           <label>Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" formControlName="email">
         </div>
         <div class="form-group">
           <label>Heslo</label>
-          <input type="password" class="form-control" id="Password1" placeholder="Heslo">
+          <input type="password" class="form-control" id="Password1" placeholder="Heslo" formControlName="password">
         </div>
         <div class="form-group">
           <label>Heslo znova</label>
-          <input type="password" class="form-control" id="Password2" placeholder="Heslo znova">
+          <input type="password" class="form-control" id="Password2" placeholder="Heslo znova" formControlName="password2">
         </div>
         <div class="row" style="margin-left:5rem">
-          <button type="submit" class="btn btn-primary">Registrovať</button>
+          <button type="submit" class="btn btn-primary" (click)="onRegister()">Registrovať</button>
           <button class="btn btn-primary" (click)="onLogin()">Prihlásiť sa</button>
         </div>
       </form>

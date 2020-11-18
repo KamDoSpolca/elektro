@@ -1,0 +1,43 @@
+<elektro-menu></elektro-menu>
+
+<div class="container">
+  <h2 style="padding:3rem 0">Moja predajňa</h2>
+
+  <form novalidate>
+    <div class="form-group">
+      <strong>Filtruj podla Nazvu</strong>
+      <input class="form-control" [(ngModel)]="filter" name="filter"/>     
+    </div>
+  </form>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Kod Produktu</th>
+        <th scope="col">Nazov</th>
+        <th scope="col">Popis</th>
+        <th scope="col">Cena</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products | tableFilter: 'name' : filter; let i = index">
+        <th scope="row">{{ product.EAN }}</th>
+        <th scope="row">{{ product.name }}</th>
+        <th scope="row">{{ product.desc }}</th>
+        <th scope="row">{{ product.price }}</th>
+        <th scope="row">
+          <button (click)="onEdit()" style="cursor:pointer;">EDIT</button>
+        </th>
+
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+</div>
+
+
