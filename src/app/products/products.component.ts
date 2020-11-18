@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent {
   title = 'elektro';
+
+  $('#myModal').on('shown.bs.modal', function() {
+    $('#myInput').trigger('focus')
+  })
 }

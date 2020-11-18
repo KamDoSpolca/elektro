@@ -14,8 +14,11 @@ li {
   display: block;
   color: white;
   text-align: center;
+  font-weight: bold;
   padding: 14px 16px;
   text-decoration: none;
+  cursor: pointer;
+  margin:0.7rem;
 }
 
 .item:hover:not(.active) {
@@ -24,4 +27,8 @@ li {
 
 .active {
   background-color: #4CAF50;
+}
+
+nav {
+    background-color: red;
 }
