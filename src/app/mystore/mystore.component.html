@@ -5,32 +5,46 @@
 
 <div class="col-sm-10">
 
-  <table class="table table-hover table-responsive">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">Kód produktu</th>
-        <th scope="col">Meno produktu</th>
-        <th scope="col">Popis</th>
-        <th scope="col">Cena</th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Produkt1</td>
-        <td>Popis produktu</td>
-        <td>Cena</td>
-        <td>
-          <a href="userinfo" class="btn btn-primary">
-            <span class="glyphicon">&#x270f;</span>
-          </a>
-        </td>
-      </tr>
-      <tr>
-      </tr>
-    </tbody>
-  </table>
+  <div class="container">
+    <form>
+      <div class="row" style="margin-bottom:3rem;">
+        <div class="col-8">
+          <input type="text" class="form-control" name="find" placeholder="Hľadaj...">
+        </div>
+        <div class="col-4">
+          <input type="submit" class="btn btn-secondary" name="find" value="Vyhľadať">
+        </div>
+      </div>
+    </form>
+
+
+    <table class="table table-hover table-responsive">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Kód produktu</th>
+          <th scope="col">Meno produktu</th>
+          <th scope="col">Popis</th>
+          <th scope="col">Cena</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Produkt1</td>
+          <td>Popis produktu</td>
+          <td>Cena</td>
+          <td>
+            <a href="userinfo" class="btn btn-secondary">
+              <span class="glyphicon">&#x270f;</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 
