@@ -26,8 +26,7 @@
     </select>
   </div>
   <div class="container" style="margin:3rem">
-    <button type="submit" class="btn btn-primary" (click)="onSubmit() ">Vytvoriť produkt</button>
+    <button type="submit" [disabled]="!form.valid" class="btn btn-primary" (click)="onSubmit() ">Vytvoriť produkt</button>
     <button class="btn btn-secondary" routerLink="/products">Spät na produkty</button>
   </div>
-
 </div>

@@ -4,29 +4,29 @@
 <div class="container">
   <div class="form-group">
     <label>Meno produktu</label>
-    <input type="text" class="form-control" placeholder="Meno produktu" formControlName="name">
+    <input type="text" class="form-control" value="{{product.name}}" placeholder="Meno produktu" formControlName="name">
   </div>
   <div class="form-group">
     <label>Popis produktu</label>
-    <textarea rows="4" cols="50" class="form-control" placeholder="Popis produktu" formControlName="desc"></textarea>
+    <textarea rows="4" cols="50" class="form-control" value="{{product.desc}}" placeholder="Popis produktu" formControlName="desc"></textarea>
   </div>
   <div class="form-group">
     <label>Cena</label>
-    <input type="number" class="form-control" placeholder="Cena produktu" formControlName="price">
+    <input type="number" class="form-control" value="{{product.price}}" placeholder="Cena produktu" formControlName="price">
   </div>
   <div class="form-group">
     <label>Dostupné na predajni</label>
-    <input type="text" for="FormControlSelect" class="form-control" placeholder="Vyberať dostupnosť pre predajne" formControlName="stores">
-    <select multiple class="form-control" id="FormControlSelect">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
+    <div class="form-row" *ngFor="let store of stores">
+      <div class="col-8">
+        <input type="text" class="form-control" placeholder="Predajňa" value="{{store.name}},{{store.city}} {{store.adress}}"formControlName="stores">
+      </div>
+      <div class="col-4">
+        <input type="number" class="form-control" placeholder="Vyberať dostupnosť pre predajne" formControlName="stores">
+      </div>
+    </div>
   </div>
   <div class="container" style="margin:3rem">
-    <button type="submit" class="btn btn-primary" (click)="onSubmit() ">Upraviť produkt</button>
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()">Upraviť produkt</button>
     <button class="btn btn-secondary" routerLink="/mystore">Spät na produkty</button>
   </div>
 
