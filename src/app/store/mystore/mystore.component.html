@@ -10,11 +10,11 @@
     </div>
   </form>
 
-  <table class="table table-striped">
+  <table class="table table-hover">
     <thead>
       <tr>
-        <th scope="col">Kod Produktu</th>
-        <th scope="col">Nazov</th>
+        <th scope="col">Kód Produktu</th>
+        <th scope="col">Názov</th>
         <th scope="col">Popis</th>
         <th scope="col">Cena</th>
       </tr>
@@ -26,18 +26,13 @@
         <th scope="row">{{ product.desc }}</th>
         <th scope="row">{{ product.price }}</th>
         <th scope="row">
-          <button (click)="onEdit()" style="cursor:pointer;">EDIT</button>
-        </th>
+          <button routerLink="/products/edit" style="cursor:pointer;"><span class="glyphicon">&#x270f;</span></button>
 
+          <!-- <button (click)="onEdit()" style="cursor:pointer;"><span class="glyphicon">&#x270f;</span></button>-->
+        </th>
       </tr>
     </tbody>
   </table>
-
-
-
-
-
-
 </div>
 
 

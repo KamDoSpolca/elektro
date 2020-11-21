@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Register } from '../auth.model';
-import { Login } from '../auth.model';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'elektro-register',
@@ -16,8 +16,8 @@ export class RegistrationComponent implements OnInit {
 
     constructor(
         private _formBuilder: FormBuilder,
-        private _authService: AuthService,
-        private _router: Router
+      private _authService: AuthService,
+      private _router: Router
     ) { }
 
     ngOnInit() {
@@ -41,7 +41,7 @@ export class RegistrationComponent implements OnInit {
             name: this.registerForm.value.name,
             email: this.registerForm.value.email,
             password: pass,
-            role: this.registerForm.value.role,
+            role: this.registerForm.value.role
         };
 
         if (pass === pass2) {

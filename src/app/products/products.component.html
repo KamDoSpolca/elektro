@@ -1,35 +1,38 @@
 <elektro-menu></elektro-menu>
-<h1>Všetky produkty</h1>
-<button class="btn btn-primary" type="button" routerLink="/products/create">Vytvor produkt</button>
+<div class="container">
+  <h2 style="padding:3rem 0">Všetky Produkty</h2>
+  <button class="btn btn-primary" type="button" routerLink="/products/create">Vytvoriť produkt</button>
+  <br/><br/>
+</div>
 
-<div class="col-1"></div>
-<div class="col-10">
-  <table class="table table-hover table-responsive" style="width:100%">
-    <thead class="thead-dark">
+<div class="container">
+
+  <form novalidate>
+    <div class="form-group">
+      <strong>Filtruj podľa Názvu Produktu</strong>
+      <input class="form-control" [(ngModel)]="filter" name="filter" />
+    </div>
+  </form>
+
+  <table class="table table-hover">
+    <thead>
       <tr>
-        <th scope="col">Kód produktu</th>
-        <th scope="col">Meno produktu</th>
+        <th scope="col">Kód Produktu</th>
+        <th scope="col">Názov</th>
         <th scope="col">Popis</th>
         <th scope="col">Cena</th>
-        <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Produkt1</td>
-        <td>Popis produktu</td>
-        <td>Cena</td>
-        <td>
-          <a href="userinfo" class="btn btn-primary">
-            <span class="glyphicon">&#x270f;</span>
-          </a>
-        </td>
-      </tr>
-      <tr>
+      <tr *ngFor="let product of products | tableFilter: 'name' : filter; let i = index">
+        <th scope="row">{{ product.EAN }}</th>
+        <th scope="row">{{ product.name }}</th>
+        <th scope="row">{{ product.desc }}</th>
+        <th scope="row">{{ product.price }}</th>
+        <th scope="row">
+          <button routerLink="/products/edit" style="cursor:pointer;"><span class="glyphicon">&#x270f;</span></button>
+        </th>
       </tr>
     </tbody>
   </table>
 </div>
-
-<div class="col-1"></div>

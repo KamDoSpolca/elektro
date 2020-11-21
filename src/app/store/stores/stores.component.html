@@ -1,24 +1,26 @@
 <elektro-menu></elektro-menu>
-<h1>Predajne Elektra</h1>
-<table class="table table-hover table-responsive">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">Kód produktu</th>
-      <th scope="col">Meno produktu</th>
-      <th scope="col">Popis</th>
-      <th scope="col">Cena</th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Produkt1</td>
-      <td>Popis produktu</td>
-      <td>Cena</td>
-      <td>Detail produktu</td>
-    </tr>
-    <tr>
-    </tr>
-  </tbody>
-</table>
+
+<div class="container">
+  <h2 style="padding:3rem 0">Zoznam všetkých predajní</h2>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Predajňa</th>
+        <th scope="col">Mesto</th>
+        <th scope="col">Adresa</th>
+        <th scope="col">Kontakt</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let store of stores | tableFilter: 'name' : filter; let i = index">
+        <th scope="row">{{ store.name }}</th>
+        <th scope="row">{{ store.city }}</th>
+        <th scope="row">{{ store.adress }}</th>
+        <th scope="row">{{ store.contact }}</th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+

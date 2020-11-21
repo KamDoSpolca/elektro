@@ -25,7 +25,7 @@ li {
   background-color: #111;
 }
 
-.active {
+#nav .item selected:active {
   background-color: #4CAF50;
 }
 
@@ -34,6 +34,3 @@ li {
     margin-top:0
 }
 
-nav {
-    background-color: red;
-}

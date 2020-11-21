@@ -12,12 +12,13 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AuthService } from './authentication/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './products/products.component';
-import { ModalComponent } from './modal/modal.component';
 
 import { StoresComponent } from './store/stores/stores.component';
 import { MyStoreComponent } from './store/mystore/mystore.component';
 import { StoreService } from './store/store.service';
 import { TableFilterPipe } from './store/table-filter.pipe';
+import { CreateComponent } from './products/create/create.component';
+import { EditComponent } from './products/edit/edit.component';
 
 
 
@@ -30,10 +31,10 @@ import { TableFilterPipe } from './store/table-filter.pipe';
     StoresComponent,
     MenuComponent,
     ProductsComponent,
-    ModalComponent,
     MyStoreComponent,
     TableFilterPipe,
-    CreateComponent
+    CreateComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
