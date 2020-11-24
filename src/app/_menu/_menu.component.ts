@@ -20,9 +20,11 @@ export class MenuComponent {
     this._authService.logoff();
   }
 
-  onUserInfo() {
-    this._router.navigate(['userinfo'])
+
+  onRoute(link) {
+    this._router.navigate([link])
   }
+ 
   
 }
 
