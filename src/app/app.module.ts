@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './authentication/login/login.component';
 import { RegistrationComponent } from './authentication/registration/registration.component';
-import { UserComponent } from './user/user.component';
+
 
 import { MenuComponent } from './_menu/_menu.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -19,6 +19,7 @@ import { StoreService } from './store/store.service';
 import { TableFilterPipe } from './store/table-filter.pipe';
 import { CreateComponent } from './products/create/create.component';
 import { EditComponent } from './products/edit/edit.component';
+import { UserComponent } from './authentication/user/user.component';
 
 
 
