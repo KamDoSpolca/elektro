@@ -26,10 +26,6 @@ export class MyStoreComponent implements OnInit {
       //})
 
   }
-
-  onEdit() {
-    alert('wooow you edited it !');
-  }
 }
 
 
