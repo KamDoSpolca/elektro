@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../authentication/auth.service';
 
 @Component({
   selector: 'elektro-menu',
@@ -10,12 +11,19 @@ export class MenuComponent {
   title = 'elektro';
 
   constructor(
-    private _router: Router
+    private _router: Router,
+    private _authService: AuthService
   ) { }
 
-  onRoute(link) {
-    this._router.navigate([link])
+
+  onSignOut() {
+    this._authService.logoff();
   }
+
+  onUserInfo() {
+    this._router.navigate(['userinfo'])
+  }
+  
 }
 
 

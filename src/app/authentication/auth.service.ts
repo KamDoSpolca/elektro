@@ -8,16 +8,17 @@ import { Login, Register } from './auth.model';
 @Injectable()
 export class AuthService {
 
+  private _isAuth: boolean = false;
+
   constructor(
     private _httpClient: HttpClient,
     private _router: Router
-  ) {
-
-  }
+  ) { }
 
   login(credentials: Login): void {
     const url = 'localhost:1234/login'
     // TODO - hack w/o backend
+    this._isAuth = true;
     this._router.navigate(['/stores']);
 
     //this._httpClient.post(url, credentials)
@@ -40,6 +41,15 @@ export class AuthService {
     //  }, err => {
     //    alert(err);
     //  });
+  }
+
+  logoff(): void {
+    this._isAuth = false;
+    this._router.navigate(['/'])
+  }
+
+  getAuth(): boolean {
+    return this._isAuth;
   }
 
 }
