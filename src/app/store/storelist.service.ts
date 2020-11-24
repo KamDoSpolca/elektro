@@ -15,7 +15,7 @@ export class StorelistService {
     const url = 'localhost:1234/store/getAll';
 
     // TODO
-    const mockData: Stores[] = [
+    const mockData: Product[] = [
       {
         EAN: '885SHD84J30',
         name: 'Samsung S10',

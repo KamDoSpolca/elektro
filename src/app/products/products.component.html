@@ -1,7 +1,7 @@
 <elektro-menu></elektro-menu>
 <div class="container">
   <h2 style="padding:3rem 0">Všetky Produkty</h2>
-  <button class="btn btn-primary" type="button" routerLink="/products/create">Vytvoriť produkt</button>
+  <button class="btn btn-primary" type="button" style="padding:0.5rem" routerLink="/products/create">Vytvoriť produkt</button>
   <br/><br/>
 </div>
 
@@ -30,7 +30,7 @@
         <th scope="row">{{ product.desc }}</th>
         <th scope="row">{{ product.price }}</th>
         <th scope="row">
-          <button routerLink="/products/edit" style="cursor:pointer;"><span class="glyphicon">&#x270f;</span></button>
+          <button routerLink="/products/edit" class="btn btn-secondary" style="cursor:pointer;"><span class="glyphicon">&#x270f;</span></button>
         </th>
       </tr>
     </tbody>
