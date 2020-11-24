@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Product } from '../products/product.model';
+import { Stores } from './stores.model';
 import { Observable } from 'rxjs';
 
 @Injectable()
@@ -15,24 +15,24 @@ export class StorelistService {
     const url = 'localhost:1234/store/getAll';
 
     // TODO
-    const mockData: Product[] = [
+    const mockData: Stores[] = [
       {
-        EAN: '885SHD84J30',
-        name: 'Samsung S10',
-        desc: 'Ja som telefoon...',
-        price: 621
+        name: 'Aupark',
+        city: 'Brno',
+        address: 'Sportovní 11',
+        contact: '0912312312'
       },
       {
-        EAN: '885SHA14J11',
-        name: 'Samsung S9',
-        desc: 'Last-year model',
-        price: 334
+        name: 'Aupark',
+        city: 'Bratislava',
+        address: 'Račianska 11',
+        contact: '0912312312'
       },
       {
-        EAN: '896SCC84X77',
-        name: 'Samsung S20',
-        desc: 'Novinka',
-        price: 799
+        name: 'Avion',
+        city: 'Košice',
+        address: 'Dunajská 11',
+        contact: '0912312312'
       },
     ]
 

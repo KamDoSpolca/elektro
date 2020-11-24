@@ -15,19 +15,11 @@
     <input type="number" class="form-control" value="{{product.price}}" placeholder="Cena produktu" formControlName="price">
   </div>
   <div class="form-group">
-    <label>Dostupné na predajni</label>
-    <div class="form-row" *ngFor="let store of stores">
-      <div class="col-8">
-        <input type="text" class="form-control" placeholder="Predajňa" value="{{store.name}},{{store.city}} {{store.adress}}"formControlName="stores">
-      </div>
-      <div class="col-4">
-        <input type="number" class="form-control" placeholder="Vyberať dostupnosť pre predajne" formControlName="stores">
-      </div>
-    </div>
+    <label>Dostupné na predajni: {{store.name}}, {{store.city}}, {{store.adress}}</label>
+        <input type="number" class="form-control" placeholder="Dostupnosť pre predajne" formControlName="stores">
   </div>
   <div class="container" style="margin:3rem">
     <button type="submit" class="btn btn-primary" (click)="onSubmit()">Upraviť produkt</button>
     <button class="btn btn-secondary" routerLink="/mystore">Spät na produkty</button>
   </div>
-
 </div>

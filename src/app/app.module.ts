@@ -19,6 +19,7 @@ import { StoreService } from './store/store.service';
 import { TableFilterPipe } from './store/table-filter.pipe';
 import { CreateComponent } from './products/create/create.component';
 import { EditComponent } from './products/edit/edit.component';
+import { StorelistService } from './store/storelist.service';
 
 
 
@@ -44,7 +45,7 @@ import { EditComponent } from './products/edit/edit.component';
     FormsModule
     
   ],
-  providers: [AuthService, StoreService],
+  providers: [AuthService, StoreService, StorelistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
