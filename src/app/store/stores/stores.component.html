@@ -1,7 +1,7 @@
 <elektro-menu></elektro-menu>
 
 <div class="container">
-  <h2 style="padding:3rem 0">Zoznam všetkých predajní</h2>
+  <h2>Zoznam všetkých predajní</h2>
 
   <table class="table table-hover">
     <thead>
@@ -16,7 +16,7 @@
       <tr *ngFor="let store of stores | tableFilter: 'name' : filter; let i = index">
         <th scope="row">{{ store.name }}</th>
         <th scope="row">{{ store.city }}</th>
-        <th scope="row">{{ store.adress }}</th>
+        <th scope="row">{{ store.address }}</th>
         <th scope="row">{{ store.contact }}</th>
       </tr>
     </tbody>

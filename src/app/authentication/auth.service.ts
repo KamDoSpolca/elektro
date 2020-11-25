@@ -36,9 +36,9 @@ export class AuthService {
     const url = 'localhost:1234/login'
     // TODO - hack w/o backend
     this._isAuth = true;
-    this._userName = 'Janqo Hrasqo';
-    this._userRole = 'Menezeris';
-    this._userShop = 'Avpark';
+    this._userName = 'Janko';
+    this._userRole = 'Manažer';
+    this._userShop = 'Aupark';
 
     this._router.navigate(['/stores']);
 

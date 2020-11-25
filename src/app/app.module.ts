@@ -21,6 +21,7 @@ import { CreateComponent } from './products/create/create.component';
 import { EditComponent } from './products/edit/edit.component';
 import { UserComponent } from './authentication/user/user.component';
 import { StorelistService } from './store/storelist.service';
+import { DetailComponent } from './products/detail/detail.component';
 
 
 
@@ -36,7 +37,8 @@ import { StorelistService } from './store/storelist.service';
     MyStoreComponent,
     TableFilterPipe,
     CreateComponent,
-    EditComponent
+    EditComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

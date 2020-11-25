@@ -11,6 +11,7 @@ import { CreateComponent } from './products/create/create.component';
 import { EditComponent } from './products/edit/edit.component';
 import { AuthGuard } from './authentication/auth.guard';
 import { UserComponent } from './authentication/user/user.component';
+import { DetailComponent } from './products/detail/detail.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'mystore', component: MyStoreComponent, canActivate: [AuthGuard] },
   { path: 'products/create', component: CreateComponent, canActivate: [AuthGuard] },
   { path: 'products/edit', component: EditComponent, canActivate: [AuthGuard] },
+  { path: 'products/detail', component: DetailComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

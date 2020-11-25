@@ -1,7 +1,7 @@
 <elektro-menu></elektro-menu>
 
 <div class="container">
-  <h2 style="padding:3rem 0">Moja predajňa</h2>
+  <h2>Moja predajňa</h2>
 
   <form novalidate>
     <div class="form-group">
@@ -24,7 +24,7 @@
         <th scope="row">{{ product.EAN }}</th>
         <th scope="row">{{ product.name }}</th>
         <th scope="row">{{ product.desc }}</th>
-        <th scope="row">{{ product.price }}</th>
+        <th scope="row">{{ product.price }} €</th>
         <th scope="row">
           <button routerLink="/products/edit" class="btn btn-secondary" style="cursor:pointer;"><span class="glyphicon">&#x270f;</span></button>
 

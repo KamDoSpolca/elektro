@@ -1,0 +1,39 @@
+<elektro-menu></elektro-menu>
+<button class="btn btn-secondary" routerLink="/products">Spät na produkty</button>
+
+<div class="container">
+  <h2>Detail Produktu: {{product.detail}} Kód: {{product.code}}</h2>
+  <div class="card vo">
+    <h4>Cena</h4>
+    <div class="card">
+      <div class="value">
+        {{product.price}} €
+      </div>
+    </div>
+
+    <h4>Dostupnosť na predajniach</h4>
+    <div class="card">
+      <table>
+        <tr *ngFor="let store of stores | tableFilter: 'name' : filter; let i = index">
+          <td>
+            <div class="title">
+              {{store.name}}, {{store.address}}, {{store.city}}, {{store.contact}}
+            </div>
+          </td>
+          <td>
+            <div class="value">
+              {{product.count}} ks
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <h4>Popis produktu</h4>
+    <div class="card">
+      <div class="value">
+        {{product.desc}}
+      </div>
+    </div>
+  </div>
+</div>

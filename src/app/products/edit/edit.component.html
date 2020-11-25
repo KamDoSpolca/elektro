@@ -1,7 +1,7 @@
 <elektro-menu></elektro-menu>
-<h1>Upraviť produkt</h1>
 
 <div class="container">
+  <h2>Upraviť produkt</h2>
   <div class="form-group">
     <label>Meno produktu</label>
     <input type="text" class="form-control" value="{{product.name}}" placeholder="Meno produktu" formControlName="name">
@@ -15,8 +15,8 @@
     <input type="number" class="form-control" value="{{product.price}}" placeholder="Cena produktu" formControlName="price">
   </div>
   <div class="form-group">
-    <label>Dostupné na predajni: {{store.name}}, {{store.city}}, {{store.adress}}</label>
-        <input type="number" class="form-control" placeholder="Dostupnosť pre predajne" formControlName="stores">
+    <label>Dostupné na predajni: {{store.name}}, {{store.city}}, {{store.address}}</label>
+        <input type="number" class="form-control" placeholder="Dostupnosť pre predajňu" formControlName="stores">
   </div>
   <div class="container" style="margin:3rem">
     <button type="submit" class="btn btn-primary" (click)="onSubmit()">Upraviť produkt</button>
