@@ -33,25 +33,25 @@ export class AuthService {
 
 
   login(credentials: Login): void {
-    const url = 'localhost:1234/login'
-    // TODO - hack w/o backend
-    this._isAuth = true;
-    this._userName = 'Janko';
-    this._userRole = 'Manažer';
-    this._userShop = 'Aupark';
+    const url = 'http://localhost/elektro1/backendJ/process.php' //url backendu
+    //// TODO - hack w/o backend
+    //this._isAuth = true;
+    //this._userName = 'Janko';
+    //this._userRole = 'Manažer';
+    //this._userShop = 'Aupark';
 
-    this._router.navigate(['/stores']);
+    //this._router.navigate(['/stores']);
 
-    //this._httpClient.post(url, credentials)
-    //  .subscribe(res => {
-    //    this._router.navigate(['/stores']);
-    //  }, err => {
-    //    alert(err);
-    //  });
+    this._httpClient.post(url, credentials)
+      .subscribe(res => {
+        this._router.navigate(['/stores']);
+      }, err => {
+        alert(err);
+      });
   }
 
   register(credentials: Register): void {
-    const url = 'localhost:1234/reg'
+    const url = 'http://localhost/elektro1/backendJ/process_reg.php'
     // TODO - hack w/o backend
     alert('uspesne ste sa registrovali')
     this._router.navigate(['/']);

@@ -1,13 +1,13 @@
 
 <?php
-require_once('connection/connection.php');
+require_once('connection.php');
 if (!$conn1) {
   echo "nieeeeeeeeeeje1";
-}
-if (!$conn2) {
+}/**
+if (!$conn3) {
   echo "nieeeeeeeeeeje2";
 }
-
+**/
 ?>
 <html>
 

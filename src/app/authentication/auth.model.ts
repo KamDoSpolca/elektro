@@ -7,7 +7,8 @@ export interface Register {
   name: string,
   email: string,
   password: string,
-  role: string
+  role: string,
+  store_id: number
 }
 
 export interface User {
@@ -18,5 +19,6 @@ export interface User {
 
 export enum Role {
   Read,
-  ReadWrite
+  ReadWrite,
+  Manažer
 }

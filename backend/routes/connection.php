@@ -11,10 +11,10 @@ require_once ('functions.php');
 //$user = new User;
 
  /**Define connections to databases**/
-$conn3 = connectToDBS('25.60.143.173', 'test1', 'jurco123', 'heslo123','1');
-$conn2 = connectToDBS('25.91.222.86', 'test1', 'jurco1', 'heslo123','2');
-$conn1 = connectToDBS('25.108.247.116', 'test1', 'jaros1', 'heslo123','3');
+/**$conn1 = connectToDBS('25.108.247.116', 'test1', 'Diana', 'heslo123','1');**/
+$conn1 = connectToDBS('25.60.143.173', 'test1', 'diana1', 'heslo123','2');
+$conn3 = connectToDBS('25.91.222.86', 'test1', 'diana2', 'heslo123','3');
 
 $connection = ['conn1' => $conn1,
-                'conn2' => $conn2,
+                /**'conn2' => $conn2,**/
                  'conn3' => $conn3];

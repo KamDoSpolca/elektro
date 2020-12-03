@@ -5,13 +5,15 @@
   $password1 = $_POST['pass1'];
   $password2 = $_POST['pass2'];
   $email = $_POST['email'];
+  $store_id = $_POST['store_id'];
 
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {header("Location: http://localhost/app/registration.html");}
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {header("Location: http://localhost/elektro1/backendJ/registration.html");}
   $role = validateData($role);
   $name = validateData($name);
   $password1 = validateData($password1);
   $password2 = validateData($password2);
   $email = validateData($email);
+  $store_id = validateData($store_id);
 
   if (!$conn1) {
     echo "not connection";
